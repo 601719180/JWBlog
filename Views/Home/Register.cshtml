@@ -1,0 +1,256 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>注册金文博客</title>
+    <link href="~/css/register.css" rel="stylesheet" />
+</head>
+<body class="B_reg">
+    <div class="TX_reg">
+        <div class="reg_hd">
+        </div>
+
+        <div class="reg_main clearfix">
+            <div class="showcolor"></div>
+            <div class="main_title">
+                <div class="main_tab">
+                    <a href="javascript:void(0);" class="current" id="phone-register">手机注册</a><a href="javascript:void(0);" id="mail-register">邮箱注册</a>
+                </div>
+            </div>
+            <div class="reg_info clearfix">
+                <!--录入信息边栏-->
+                <div class="reg_aside">
+                    <p class="have_ac">已有帐号，<a href="/signup/signin.php?entry=blog&src=tech&entry=blog&src=tech">直接登录 >></a></p>
+                </div>
+                <!--/录入信息边栏-->
+                <!--录入信息-->
+                <div class="reg_form reg_mobile" id="phone">
+                    <form id="phone-form" name="signup">
+                        <div class="title_note" node-type="title_note">
+                        </div>
+                        <input type="hidden" node-type="regtype" name="regtype" value="mobile" />
+                        <div class="info_list clearfix">
+                            <div class="tit">
+                                <i>*</i>手机号码：
+                            </div>
+                            <div class="ipt">
+                                <input class="reg_ipt" type="text" name="mobile" maxlength="11" value="" node-type="field-mobile" />
+                            </div>
+                            <div class="tips" node-type="field-mobile-tip">
+                            </div>
+                        </div>
+                        <div class="info_list clearfix">
+                            <div class="tit">
+                                <i>*</i>设置密码：
+                            </div>
+                            <div class="ipt">
+                                <input class="reg_ipt" type="password" name="password" maxlength="16" value="" node-type="field-password" />
+                            </div>
+                            <div class="tips" node-type="field-password-tip">
+                            </div>
+                        </div>
+
+                        <div class="info_list clearfix fav_tags">
+                            <div class="tips" node-type="field-like-tip">
+                            </div>
+                        </div>
+                        <div class="info_list clearfix">
+                            <div class="tit" node-type="sms_up_lab">
+                                <i>*</i>上发短信手机：
+                            </div>
+                            <div class="ipt active">
+                                <a href="javascript:void(0);" class="btn_active" node-type="send-sms"><span>我要使用注册手机发送短信</span></a>
+                                <p class="toptp_mobile" style="display:none;" node-type="mobile_msg_p_tip"><span class="icon_suggest"></span><span node-type="mobile_msg_tip">请使用手机号11111111111发送yz到1069009010021完成验证</span></p>
+                            </div>
+                            <div class="tips errtop" node-type="field-door-tip">
+                            </div>
+                        </div>
+                        <div class="info_submit" node-type="m_submit_div" style="display:none;">
+                            <div class="ipt">
+                                <a href="javascript:void(0);" class="btn_sub" node-type="submit-trigger"><span>短信已发,立即注册</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--/录入信息-->
+                <!--录入信息-->
+                <div class="reg_form reg_mail" id="mail">
+                    <form id="mail-form" name="signup">
+                        <div class="title_note" node-type="title_note">
+                        </div>
+                        <input type="hidden" node-type="regtype" name="regtype" value="othermail" />
+                        <div class="info_list clearfix" id="outer-email-container">
+                            <div class="tit">
+                                <i>*</i>邮箱地址：
+                            </div>
+                            <div class="ipt">
+                                <input class="reg_ipt" type="text" name="othermail" maxlength="64" value="" node-type="field-outerMail" />
+                            </div>
+                        </div>
+                        <div class="info_list clearfix" id="email-container" style="display:none;">
+                            <div class="tit">
+                                <i>*</i>邮箱地址：
+                            </div>
+                            <div class="ipt">
+                                <input class="reg_ipt mail_addr" type="text" name="username" maxlength="16" value="" node-type="field-mail" />
+                                <div class="mail_domain" name="mail_type">
+                                    <select name="mailType" node-type="mail-type">
+                                        @*<option value="sina.cn">@sina.cn</option>
+                                        <option value="sina.com">@sina.com</option>*@
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="tips" node-type="field-mail-tip">
+                                <p class="suggest"><span class="icon_suggest"></span><a href="javascript:void(0);" action_type="showOuterEmailField">常用邮箱注册</a></p>
+                            </div>
+                        </div>
+                        <div class="info_list clearfix">
+                            <div class="tit">
+                                <i>*</i>设置密码：
+                            </div>
+                            <div class="ipt">
+                                <input class="reg_ipt" type="password" name="password" maxlength="16" value="" node-type="field-password" />
+                            </div>
+                            <div class="tips" node-type="field-password-tip">
+                            </div>
+                        </div>
+
+                        <div class="info_list clearfix fav_tags">
+                            <div class="tips" node-type="field-like-tip">
+                            </div>
+                        </div>
+                        <div class="info_list clearfix">
+                            <div class="tit">
+                                <i>*</i>验证码：
+                            </div>
+                            <div class="ipt ver_code">
+                                <input class="reg_ipt" type="text" autocomplete="off" name="door" maxlength="10" value="" node-type="field-door" />
+                                <span class="ver_pic">
+                                    <img src="" node-type="door-img" refake-type="checkcode" />
+                                    <a href="javascript:void(0);"></a>
+                                </span>
+                                <a href="javascript:void(0);" node-type="change-door">看不清？</a>
+                            </div>
+                            <div class="tips" node-type="field-door-tip">
+                                <p class="erro">
+                                    <span class="icon_del"></span>请输入验证码
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info_submit">
+                            <div class="ipt">
+                                <a href="javascript:void(0);" class="btn_sub" node-type="submit-trigger" refake-type="submit"><span>立即注册</span></a>
+                            </div>
+                        </div>
+                    </form>
+                    <!--/录入信息-->
+
+                </div>
+                <!--登录浮层-->
+                <script type="text/tpl" id="secondcheck">
+                    <div class="tx_layer" style="display:none;" node-type="outer">
+                        <div class="txl_hd">
+                            <div class="txl_tl" node-type="title">短信验证</div><a href="javascript:void(0);" class="tx_cls" title="关闭" node-type="close"></a>
+                        </div>
+                        <div class="txl_cnt" node-type="inner">
+                            <div class="ndmsg">
+                                <p class="toptp"><span class="icon_suggest"></span>本次注册需要短信验证，请按照以下提示操作</p>
+                                <dl class="lay_tab clearfix">
+                                    <dt>所在地：</dt>
+                                    <dd>
+                                        <div class="country">
+                                            <select node-type="country" disabled="true">
+                                                <option value="86" selected="selected">中国</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="lay_tab clearfix">
+                                    <dt>手机号码：</dt>
+                                    <dd>
+                                        <div class="reg_ipt tel_location">
+                                            <span class="country_num" node-type="countryNum">0086</span>
+                                            <input class="tel_num reg_ipt" type="text" value="" node-type="phoneNum" />
+                                        </div><div class="vrcd_tip" node-type="doorTip" style="display:none;"></div>
+                                    </dd>
+                                </dl>
+                                <dl class="lay_tab clearfix">
+                                    <dt> </dt>
+                                    <dd class="active"><a href="javascript:void(0);" class="btn_active btn_active_dis" node-type="sendcode"><span>使用该手机发送短信</span></a></dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="txl_cnt" node-type="sendp" style="display:none;">
+                            <div class="ndmsg">
+                                <p class="toptp"><span class="icon_suggest"></span><span node-type="msg_tip">本次注册需要短信验证.请使用手机号11111111111发送yz到1069009010021完成验证</span></p>
+                                <dt>您需要支付运营商收取的短信资费</dt><div class="send_msg" node-type="send_msg"></div>
+                                <div class="btn_wrap">
+                                    <a href="javascript:void(0);" class="btn_s" node-type="ok"><span>我已发送短信</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </script>
+            </div>
+        </div>
+        <div class="reg_lang"></div>
+        <div class="reg_foot">
+            <p>
+                <a target="_blank" href="#">金文简介</a>
+                <a target="_blank" href="#">About JinWen</a>
+                <a target="_blank" href="#">广告服务</a>
+                <a target="_blank" href="#">联系我们</a>
+                <a target="_blank" href="#">招聘信息</a>
+                <a target="_blank" href="#">网站律师</a>
+                <a target="_blank" href="#">JinWen English</a>
+                <a target="_blank" href="#">注册</a>
+                <a target="_blank" href="#">产品答疑</a>
+            </p>
+            <p>客户服务电话 888-888-8888  欢迎批评指正</p>
+            <p>
+                JinWen &copy 1996 -
+                <script language=javascript type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script> JinWen Corporation, All Rights Reserved 金文项目小组 <a target="_blank" href="#">版权所有</a>
+            </p>
+        </div>
+
+
+        <script type="text/javascript" charset="utf-8" src="/js/STK/js/gaea_1_19.js"></script>
+        <script type="text/javascript">
+            //在这里输出配置信息
+            var $CONFIG = {};
+            $CONFIG.type = "hollow";
+            $CONFIG.salt = {
+                "entry": "blog",
+                "referer": "ec5a8473d9f51ca2c8b79cc485c6f356http://localhost:54014/Index.html",
+                "src": "tech",
+                "type": "hollow",
+                "regtime": "1590216796",
+                "f11ccd33e97acc9d124f29ffef2ec44f": "7",
+                "9d25431d0e3acffb3b5138c3de140fa6": "952c1546ec4da2341854408731ef3e74",
+                "e2796227eb7c2bcc023a7c92749187b1": "a9ab39fed393b49bb9a140862149d0af",
+                "abc89806e71da9050c1bd97e132b3972": "dd63c1e7b6e3535d4b5e4f3724d4964d",
+                "341376db7ed2ca97c9aa9b456085aba1": "fe349041ea679d722fa7e392d7654bca",
+                "db74543e46220ae6e7443c2b5c5432f7": "9349db8e480dadc0d28077f56c3c5c72",
+                "b320c1b1969f5c2259ed2e7d679432d8": "0d6ccede084ae4ceb389ebf30168d86c",
+                "89f2f0edd4e669cafcf81335d96790a6": "ea74230bbdf6cdd20670a978b1c5c312",
+                "r": ""
+            };
+            $CONFIG.js_files = [
+                'v1/apps/register/js/signup.js?v=20140319'
+            ];
+        </script>
+        <script type="text/javascript" charset="utf-8" src="/js/boot.js"></script>
+
+
+    </div>
+</body>
+</html>
+
+
+s
