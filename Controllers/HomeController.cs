@@ -8,23 +8,11 @@ namespace JWBlog.Controllers
 {
     public class HomeController : Controller
     {
-        //首页
         public ActionResult Index()
         {
             return View();
         }
 
-        //注册
-        public ActionResult Register()
-        {
-            return View();
-        }
-
-        //登录
-        public ActionResult Login()
-        {
-            return View();
-        }
-
+       
     }
 }
