@@ -1,0 +1,278 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>金文通行证登录</title>
+
+    <link href="~/css/Login/signin_index.css" rel="stylesheet" />
+    <link href="~/css/Login/skin.css" rel="stylesheet" />
+    <link href="~/css/Login/frame.css" rel="stylesheet" />
+
+    <script language="javascript" type="text/javascript" defer>
+        //避免ie中后退时沿用前页的utf8编码，如果是则刷新，刷新后就是gb2312了,为了兼容某些浏览器，如ie6，这段话放在第一个script标签里
+        try {
+            if (document.charset == 'utf-8') {
+                window.location.href = window.location.href; //only for refreshing when charset is utf-8
+            }
+        } catch (e) { }
+    </script>
+    <script language="javascript" type="text/javascript" defer>
+        //只要复制过去改下下面参数就可以了 :)
+        passcardOBJ.overfcolor = '#999999';//鼠标经过字体颜色
+        passcardOBJ.overbgcolor = '#E8F4FC';//鼠标经过背景颜色
+        passcardOBJ.outfcolor = '#000000';//鼠标离开字体颜色
+        passcardOBJ.outbgcolor = '';//鼠标离开背景颜色
+    </script>
+    <style type="text/css">
+        #newDiv {
+            filter: alpha(opacity=100); /* IE */
+            -moz-opacity: 100; /* Moz + FF */
+            opacity: 100; /* 支持CSS3的浏览器（FF 1.5也支持）*/
+        }
+
+        .popdiv {
+            position: absolute;
+            zindex: 9999;
+            height: 70px;
+            background: #fff;
+            border: 1px solid #ccc;
+            color: #999;
+            padding: 5px;
+        }
+
+            .popdiv input {
+                vertical-align: middle;
+                height: 20px;
+            }
+
+        label {
+            cursor: pointer !important;
+            vertical-align: middle;
+        }
+
+        .passCard {
+            position: absolute;
+            background: #fff;
+            border: 1px solid #dddddd;
+            margin: 0px 0px 0px -1px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .note {
+            padding: 0 !important;
+            margin: 4px !important;
+        }
+
+        .passCard li {
+            padding: 0 !important;
+            margin: 4px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="WB_miniblog" id="wrap">
+        <div class="iforgot_bd">
+            <div class="iforgot_header clearfix">
+                <div class="name_mod W_fr">
+                    <a href="/Home/Index" class="S_txt1">博客首页</a>
+                </div>
+            </div>
+            <div class="iforgot_cont">
+                <div class="i_top" style="padding:0 0;">
+                </div>
+                <div class="i_mod" style="padding-top:82px;">
+                    <form method="post" id="vForm" name="vForm">
+                        <input type="hidden" id="r" name="reference" value="" />
+                        <input type="hidden" id="e" name="entry" value="blog" />
+                        <input type="hidden" name="reg_entry" value="blog" />
+                        <div class="logoicon"></div>
+                        <div class="main_cen">
+                            <br><br>
+                            <p class="title1"></p>
+                            <div class="form_mod">
+                                <ul class="form_list">
+                                    <li class="item">
+                                        <span class="tit">登录名：</span>
+                                        <input type="hidden" id="ag" name="ag" value="">
+                                        <input autocomplete="off" id="username" name="username" tabindex="0" type="text" value="" maxlength="64" class="fInput w200" alt="登录名:无内容/长度{1-64}/errArea{usernameErr}" placeholder="请输入账号" />
+                                        <a href="/Home/Register" class="form_prompt">注册</a>
+                                        <span class="form_prompt errorShow" id="usernameErr"></span>
+                                    </li>
+                                    <script language=javascript type="text/javascript">
+									<!--    //
+                                        //检查是否记住登录名
+                                        function GetCookie(_Name) {
+                                            var Res = eval('/' + _Name + '=([^;]+)/').exec(document.cookie);
+                                            return Res == null ? false : Res[1];
+                                        }
+
+                                        //设置占位文案
+                                        function setPlaceHolder(node) {
+                                            var that = {};
+
+                                            that.init = function () {
+                                                var prop = 'placeholder';
+                                                that.content = node.getAttribute(prop);
+                                                var enable = "placeholder" in document.createElement('input');
+                                                if (!enable) {
+                                                    that.build();
+                                                    setTimeout(that.show);
+                                                    $addEvent2(node, that.hide, 'focus');
+                                                    $addEvent2(node, that.hide, 'propertychange');
+                                                    $addEvent2(node, that.show, 'blur');
+                                                    $addEvent2(that.label, function () {
+
+                                                        that.hide();
+                                                        setTimeout(function () {
+                                                            node.focus();
+                                                        });
+                                                    }, 'mousedown');
+                                                }
+                                            };
+
+                                            that.build = function () {
+                                                if (that.label) { return; }
+                                                var label = that.label = $C('div');
+                                                label.innerHTML = that.content;
+                                                label.style.color = '#999';
+                                                label.style.fontSize = node.style.fontSize;
+                                                label.style.lineHeight = node.style.lineHeight;
+                                                label.style.position = 'absolute';
+                                                that.setPos(324, -35);
+
+                                                node.parentNode.insertBefore(label, node);
+                                            };
+
+                                            that.setPos = function (x, y) {
+                                                x = x || 0;
+                                                y = y || 0;
+                                                that.label.style.marginLeft = x + 'px';
+                                                that.label.style.marginTop = y + 'px';
+                                            };
+
+                                            that.show = function () {
+                                                if (node.value == '') {
+                                                    that.label.style.display = 'block';
+                                                }
+                                            };
+
+                                            that.hide = function () {
+                                                if (that.label.style.display != 'none') {
+                                                    that.label.style.display = 'none';
+                                                }
+                                            };
+
+                                            that.init();
+                                            return that;
+                                        }
+
+                                        function initUserName() {
+                                            var loginname = GetCookie('cREMloginname');
+                                            if (loginname != false) {
+                                                if ($('username').value == '') {
+                                                    $('username').value = decodeURIComponent(loginname);
+                                                }
+                                                try {  // 该元素可能没有
+                                                    $('username2').innerHTML = decodeURIComponent(loginname);
+                                                } catch (e) { }
+                                                $('remLoginName').checked = "checked";
+                                            }
+                                            setPlaceHolder($('username'));
+                                            passcardOBJ.init(
+                                                // FlashSoft 注意,最好这个input的autocomplete设定为off
+                                                // 需要有下拉框的input对象
+                                                document.getElementById("username"),
+                                                {
+                                                    // 鼠标经过字体颜色
+                                                    overfcolor: "#999",
+                                                    // 鼠标经过背景颜色
+                                                    overbgcolor: "#e8f4fc",
+                                                    // 鼠标离开字体颜色
+                                                    outfcolor: "#000000",
+                                                    // 鼠标离开背景颜色
+                                                    outbgcolor: ""
+                                                },
+                                                // 输入完成后,自动需要跳到的input对象[备选]
+                                                document.getElementById("password")
+                                            );
+                                        }
+                                        window.onload = initUserName;
+                                                                                                                                                    //-->
+                                    </script>
+                                    <li class="item">
+                                        <span class="tit">密码：</span>
+                                        <input id="password" name="password" type="password" tabindex="1" maxlength="32" alt="密码:无内容/errArea{passwordErr}" class="fInput w200" value="" />
+                                        <a href="https://login.sina.com.cn/getpass.html" class="form_prompt">忘记密码</a></span>
+                                        <span class="form_prompt errorShow" id="passwordErr"></span>
+                                    </li>
+
+                                    <!-- 动态码 -->
+                                    <li class="item" style='display:none' id='vsn_content'>
+                                        <span class="tit">微盾动态码：</span>
+                                        <input type="text" value="" class="fInput w200" alt="微盾动态码:无内容/errArea{vsncodeErr}" autocomplete='off' disabled='disabled' maxlength="6" tabindex="1" name="vsncode" id="vsncode">
+                                        <a href="http://account.weibo.com/forgot/vdun" target="_blank" class="form_prompt">挂失微盾</a></span>
+                                        <span id="vsncodeErr" class="form_prompt errorShow"></span>
+                                    </li>
+                                    <!-- /动态码 -->
+                                    <!-- 验证码 -->
+                                    <li class="item" id='door_content' style='display:none'>
+                                        <span class="tit">验证码：</span>
+                                        <span class="code_mod" id="door_img">
+                                            <input autocomplete="off" class="fInput w93" id="door" disabled="disabled" name="door" type="text" autocomplete="off" maxlength="10" alt="验证码:无内容/有空格/errArea{doortip}" value="" />
+                                            <img id="check_img" class="code_img" width="100" height="35" src="" />
+                                            <a href="javascript:con_code();" class="form_prompt">换一换</a>
+                                        </span>
+                                        <span id="doortip" class="form_prompt errorShow"></span>
+                                    </li>
+                                    <!-- /验证码 -->
+                                    <li class="loginError">
+                                        <div id="login_err" style="margin-left:320px;"></div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="btn_mod" style="margin-left:320px;">
+                                            <input id="remLoginName" checked="checked" tabindex="3" name="remLoginName" type="checkbox" class="checkboxInput" />
+                                            <label for="remLoginName">下次自动登录</label>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="btn_mod">
+                                            <input style="width:202px;" type="submit" tabindex="5" class="W_btn_a btn_34px" value="登 录" />
+                                        </div>
+                                        <div class="clearit"></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="main_bottom"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="WB_footer S_bg2">
+        <div class="other_link S_bg1 clearfix T_add_ser">
+            <p class="copy">
+                <a href="#" class="footBg">金文简介</a>
+                <a class="footBg" href="#">About JinWen</a>
+                <a class="footBg" href="#">广告服务</a>
+                <a class="footBg" href="#">联系我们</a>
+                <a class="footBg" href="#">招聘信息</a>
+                <a class="footBg" href="#">网站律师</a>
+                <a class="footBg" href="#" target="__blank">JinWen English</a>
+                <a class="footBg" href="#" target="__blank">注册</a>
+                <a class="footBg" href="#" target="__blank">产品答疑</a>
+            </p>
+            <div class="copy">
+                <a href="javascript:;" class="S_txt2">客户服务电话：888 888 8888 欢迎批评指正</a>
+            </div>
+            <p class="company"><span class="copy S_txt2">Copyright ? 1996-2016 JinWen Corporation, All Rights Reserved 金文项目小组 版权所有</span></p>
+        </div>
+    </div>
+
+</body>
+</html>

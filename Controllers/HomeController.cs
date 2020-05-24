@@ -8,16 +8,54 @@ namespace JWBlog.Controllers
 {
     public class HomeController : Controller
     {
-        //首页
+        #region 首页
         public ActionResult Index()
         {
             return View();
         }
+        #endregion
 
-        //娱乐
+        #region 娱乐
         public ActionResult Game()
         {
             return View();
         }
+        #endregion
+
+        #region 美食
+        public ActionResult Foods()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 体育
+        public ActionResult PE()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 文章详情
+        public ActionResult ArticleDetails()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 注册
+        public ActionResult Register()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 登录
+        public ActionResult Login()
+        {
+            return View();
+        }
+        #endregion
+
     }
 }

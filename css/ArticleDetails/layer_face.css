@@ -1,0 +1,141 @@
+﻿@charset "utf-8";
+
+.faceItemList {
+    width: 383px;
+    margin: 20px 12px;
+}
+
+.tab_subsort {
+    margin: 10px 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .tab_subsort li {
+        float: left;
+    }
+
+    .tab_subsort a, tab_subsort a:link {
+        padding: 0 10px;
+        height: 22px;
+        line-height: 22px;
+        display: inline-block;
+        color: #2e3092;
+    }
+
+    .tab_subsort li.cur a, tab_subsort li.cur a:link {
+        background: #e6e6e6;
+    }
+
+    .tab_subsort .btn_func {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        text-align: right;
+    }
+
+        .tab_subsort .btn_func a, .tab_subsort .btn_func a:link {
+            padding: 0;
+            margin-left: 9px;
+        }
+
+    .tab_subsort .arrow_preview {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: url(../../../images/common/img_rparrow.png) 0 0 no-repeat;
+    }
+
+    .tab_subsort .arrow_next {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: url(../../../images/common/img_rparrow.png) 0 -16px no-repeat;
+    }
+
+.face_tp {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    *zoom: 1;
+}
+
+    .face_tp:after {
+        width: 100%;
+        height: 0;
+        clear: both;
+        content: "";
+        overflow: hidden;
+        display: block;
+        visibility: hidden;
+    }
+
+    .face_tp li {
+        margin: -1px 0 0 -1px;
+        float: left;
+        _display: inline;
+        width: 22px;
+        height: 22px;
+        border: 1px #e8e8e8 solid;
+        padding: 4px;
+        cursor: pointer;
+    }
+
+        .face_tp li.hover {
+            position: relative;
+            z-index: 2;
+            border-color: #0095cd;
+        }
+
+.face_lt li {
+    border: 1px #cdd5ed solid;
+}
+
+.face_mg {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    *zoom: 1;
+}
+
+    .face_mg:after {
+        width: 100%;
+        height: 0;
+        clear: both;
+        content: "";
+        overflow: hidden;
+        display: block;
+        visibility: hidden;
+    }
+
+    .face_mg li {
+        position: relative;
+        margin: 0 11px 0 0;
+        float: left;
+        _display: inline;
+        width: 52px;
+        height: 74px;
+        text-align: center;
+    }
+
+        .face_mg li img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            border: 1px #d4d3d3 solid;
+        }
+
+        .face_mg li span {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            display: block;
+        }
+
+        .face_mg li .ico {
+            position: absolute;
+            right: 3px;
+            top: 33px;
+            width: 16px;
+            height: 16px;
+            background: url(../../../images/common/img_rpplay.png) no-repeat;
+            _background: url(../../../images/common/img_rpplay.gif) no-repeat;
+        }

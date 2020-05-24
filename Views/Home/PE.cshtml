@@ -1,0 +1,577 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<!-- [ published at 2020-05-24 20:55:11 ] -->
+<head>
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>体育博客_体育频道_金文网</title>
+    <meta name="keywords" content="金文体育博客，专家博客，明星博客，体育博客，草根博客">
+    <meta name="description" content="金文体育博客最具人气的体育类博客，包含黄健翔博客，李承鹏博客，董路博客，杨毅博客，苏群博客，于嘉博客，运动员博客，冠军博客，汇集最热门最专业的赛事评论、最有见地的球迷网友、最贴心的编辑团队、最精英的草根博客">
+    <!-- 360 启动急速模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+
+    <link href="~/css/PE/blog-login.css" rel="stylesheet" />
+    <link href="~/css/PE/index-22f862.css" rel="stylesheet" />
+    <link href="~/css/PE/outlogin_skin_reversion.css" rel="stylesheet" />
+
+    <style>
+        .weibo-account-slider-nav a {
+            margin-right: 12px
+        }
+
+        .fans_rank_right ul li .follow i {
+            background-image: url(//n.sinaimg.cn/blog/sub/css/follow_icon.png);
+            background-position: 0 0;
+        }
+
+        .weibo-account-slider-nav {
+            width: 48px
+        }
+    </style>
+    <script src="//n.sinaimg.cn/blog/0977ce10/20180408/jsload.js"></script>
+    <script>document.domain = "sina.com.cn";</script>
+    <script>
+        var __scope__ = {
+            updateBrowserLink: '#'//浏览器推荐下载地址
+        }
+    </script>
+    <script>
+        (function (w) {
+            // 消息总线，应对与不同组建之间，状态交互。
+            function MsgBus() {
+                this.eventInfo = {};
+            }
+            MsgBus.prototype.subscribe = function (name, cb, ctx) {
+                if (Object.prototype.toString.call(name) !== '[object String]') {
+                    throw new Error('arguments error , name must be a String type');
+                }
+                if (Object.prototype.toString.call(cb) !== '[object Function]') {
+                    throw new Error('arguments error , cb must be a Function type');
+                }
+                if (!this.eventInfo[name]) {
+                    this.eventInfo[name] = [];
+                }
+                this.eventInfo[name].push({
+                    cb: cb,
+                    ctx: ctx || null
+                });
+            }
+            MsgBus.prototype.publish = function (name) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                if (this.eventInfo[name]) {
+                    for (var i = 0; i < this.eventInfo[name].length; i++) {
+                        this.eventInfo[name][i].cb.apply(this.eventInfo[name][i].ctx, args);
+                    }
+                }
+            }
+            MsgBus.prototype.off = function (name, cb) {
+                if (this.eventInfo[name] && !cb) {
+                    this.eventInfo[name] = [];
+                } else {
+                    for (var i = 0; i < this.eventInfo[name].length; i++) {
+                        if (cb === this.eventInfo[name][i].cb) {
+                            this.eventInfo[name].splice(i, 1);
+                        }
+                    }
+                }
+            }
+            w.msgBus = new MsgBus();
+        })(window);
+    </script>
+
+    <style>
+        .nav {
+            background: #3387D5;
+        }
+
+        .feed-nav .active {
+            background: #3387D5;
+        }
+
+        .logined .logined-bottom-btn a {
+            border: 1px solid #1A6CB8;
+            color: #3387D5;
+        }
+
+            .logined .logined-bottom-btn a:hover {
+                background: #1A6CB8;
+            }
+
+        .nav .nav-list .active {
+            background: #1A6CB8;
+        }
+
+        .nav .sub-nav .down-list li .active {
+            background: #1A6CB8;
+        }
+        /*排行榜下拉*/
+        .flex-nav {
+            border-top: 2px solid #3387D5;
+            background: #fafbfd;
+            border-bottom: 1px solid #ecedf0
+        }
+
+        .feed-img-list .title a, .feed-only-text .title a, .feed-single-img .title a {
+            color: #333;
+        }
+
+            .art-info .blog-user a:hover, .art-info .cmnt:hover, .feed-img-list .title a:hover, .feed-only-text .body a:hover, .feed-only-text .title a:hover, .feed-single-img .body a:hover, .feed-single-img .title a:hover {
+                color: #3387D5;
+            }
+
+        .b-img-talk .des a:hover, .b-img-talk .title a:hover, .b-user-talk a:hover, .login-info .other-btns a:hover, .logined .logined-name:hover, .logined .logout-btn:hover, .logined li a:hover {
+            color: #3387D5;
+        }
+
+        .login-info .login-btn {
+            background: #3387D5;
+        }
+
+        .blog_tuijian .tuijian_wenzi .tuijian_info:hover, .blog_tuijian .tuijian_wenzi a:hover, .blog_tuijian .tuijian_wenzi h4:hover {
+            color: #3387D5;
+        }
+
+        .fans_rank_right ul li .follow {
+            color: #3387D5;
+        }
+            /*排行榜文字效果*/
+            .fans_rank_right ul li .follow:hover {
+                color: #1A6CB8;
+            }
+        /*排行榜文字效果*/
+        .nav .sub-nav .down-list li a {
+            background: #3387D5;
+        }
+        /*排行榜默认*/
+        .login-info input:focus {
+            outline: 2px auto #d59544;
+            outline-color: #3387D5;
+        }
+
+        .logined li a {
+            color: #3387D5;
+        }
+
+        .article_rank_right ul li a:hover {
+            color: #3387D5;
+        }
+
+        .fans_rank_right ul li .follow {
+            color: #3387D5;
+        }
+
+            .fans_rank_right ul li .follow:hover {
+                color: #1A6CB8;
+            }
+
+        .nav .nav-list li a {
+            color: #D0E8FF;
+        }
+        /*导航栏上面的文字的颜色，只有这个和别的不一样，其他的做替换就好*/
+        .article_rank_right ul li i {
+            background: #3387D5;
+        }
+
+        .nav .blog-map a {
+            color: #D0E8FF;
+        }
+    </style>
+    <meta name="sudameta" content="dataid:wpcomos:171809" />
+</head>
+<html>
+<body>
+    <!-- topnav -->
+    <!-- 频道nav -->
+    <div class="nav">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <ul class="nav-list">
+                <li><a target="_blank" href="#" class="">娱乐</a></li>
+                <li><a target="_blank" href="#" class="">文史</a></li>
+                <li><a target="_blank" href="#" class="">教育</a></li>
+                <li><a target="_blank" href="#" class="cur">体育</a></li>
+                <li><a target="_blank" href="#" class="">美食</a></li>
+            </ul>
+            <script>
+                // 添加滚动事件
+                jsLoader(jsAssets.jq, function () {
+                    //nav交互内容
+                    $('.nav-list>li a').mouseenter(function () {
+                        $(this).addClass('active');
+                    }).mouseleave(function () {
+                        $(this).removeClass('active');
+                    });
+                    $('.nav .sub-nav').mouseenter(function () {
+                        $(this).find('.down-list').show();
+                    }).mouseleave(function () {
+                        $(this).find('.down-list').hide();
+                    });
+                    $('.sub-nav .down-list a').mouseenter(function () {
+                        $(this).addClass('active');
+                    }).mouseleave(function () {
+                        $(this).removeClass('active');
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+    <!-- end频道nav -->
+    <!-- content -->
+    <div class="wrapper_content clearfix">
+        <div class="content_left">
+            <!-- 焦点图 -->
+            <div class="slider main-slider">
+                <ul class="slider-container">
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/blog/transform/240/w650h390/20190704/833d-hzfekep9052236.png" alt="世联总决赛郎平遭炮轰，被美国主帅质疑当逃兵">
+                            <div class="bg">
+                                <p>世联总决赛郎平遭炮轰，被美国主帅质疑当逃兵</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/blog/transform/240/w650h390/20190704/b514-hzfekep9054095.jpg" alt="高段位后腰，必会的一个足球小技巧！">
+                            <div class="bg">
+                                <p>高段位后腰，必会的一个足球小技巧！</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/blog/transform/240/w650h390/20190704/30b3-hzfekep9056121.jpg" alt="2019东欧高球行第二场：捷克Panorama度假村">
+                            <div class="bg">
+                                <p>2019东欧高球行第二场：捷克Panorama度假村</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="left-arr" href="javascript:void(0);"></a>
+                <a class="right-arr" href="javascript:void(0);"></a>
+            </div>
+
+            <!-- end 焦点图  -->
+            @*<div class="blog-center">
+                     feed start
+                    <script type="text/javascript">
+                        var FEED_CARD_INFO = {
+                            //feed 的pageid
+                            pageId: 143,
+                            num: 30,//feed 单次请求长度
+                            feedWidth: 650,//feed展示宽度
+                            imgMargin: 8,//组图中的图片左右间距
+                            //兴趣设置参数
+                            subCateID: 100,//只有这个来记录用户订阅的顺序
+                            //固定首个位置
+                            firstTab: {
+                                txt: '最新内容',
+                                lid: 3104
+                            },
+                            //默认
+                            tabs: [3104],
+                            //全部
+                            allTabs: [3104],
+                            tabInfos: {}
+                        }
+                    </script><div id="feed" class="feed">
+                        <div id="flex-nav" class="flex-nav" data-sudaclick=feed_nav>
+                            <div class="feed-nav">
+                                <ul id="feed-top-nav" class="feed-top-nav">
+                                    <li class="active">全部</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="feed-list" data-sudaclick="blog_feed">
+                        </ul>
+                        <div class="feed-loading">
+                            <span>加载中</span>
+                        </div>
+                        <div class="feed-end">
+                            <span>没有新的文章了，请看看其他频道吧！</span>
+                        </div>
+                    </div>
+                     feed end
+                </div>*@
+
+            <div class="newsContent" style="width:655px;height:58px;border-top:1px solid blue;background-color:#ecedf0"><div style="width:96px;height:58px;background-color:#3387D5"><span style="font-size:20px;position:relative;top:15px;left:5px">最新内容</span></div></div>
+            <br />
+            <div class="Content1" style="width: 655px; height: 178px;">
+                <dl>
+                    <dt>
+                        <img src="~/images/rB8CCl7GI-GAev2GAATbdGQ8ec4949.jpg" style="width:156px;height:104px;float:left" />
+                    </dt>
+                    <dd>
+                        <a style="font-size:22px;font-weight:bold;margin-left:10px">花式足球技巧之身后提拉环绕地球的一种变化</a><br /><br />
+                        <a href="#" style="font-size:18px;padding-left:10px">大家好，今天我们分享花式足球系列之身后提拉环绕地球，希望大家喜欢！今天给大家带来一个新技...[详细]</a>
+                    </dd>
+                </dl>
+                <br /><br />
+                <div class="people"><a style="float:left;font-size:15px;color:#d9d9d9">博主：足球之路2015</a><a style="float:left;font-size:15px;float:right;color:#d9d9d9">5月22日 12:45</a></div>
+            </div>
+
+            <div class="Content2" style="width: 655px; height: 178px;">
+                <dl>
+                    <dt>
+                        <img src="~/images/8c4b6897j00q9hst1007oc000tq00gqc.jpg" style="width:156px;height:104px;float:left" />
+                    </dt>
+                    <dd>
+                        <a style="font-size:22px;font-weight:bold;margin-left:10px">确保首次10K赛成功跑者训练要做好三点</a><br /><br />
+                        <a href="#" style="font-size:18px;padding-left:10px">10K赛是世界上最受欢迎的跑步比赛项目之一，它既有一定的挑战性，但又不是遥不可及。很多跑者经过科学训练一段时间之后，都能参加10K赛。</a>
+                    </dd>
+                </dl>
+                <br /><br />
+                <div class="people"><a style="float:left;font-size:15px;color:#d9d9d9">博主：夜夜野豹</a><a style="float:left;font-size:15px;float:right;color:#d9d9d9">5月20日 16:15</a></div>
+            </div>
+
+            <div class="Content3" style="width: 655px; height: 178px;">
+                <dl>
+                    <dt>
+                        <img src="~/images/rB8CCl7E41uATox6AAGxh-uQMCg304.jpg" style="width:156px;height:104px;float:left" />
+                    </dt>
+                    <dd>
+                        <a style="font-size:22px;font-weight:bold;margin-left:10px">15个经典过人技巧极其训练方法</a><br /><br />
+                        <a href="#" style="font-size:18px;padding-left:10px">大家好，今天我们分享15个经典过人技巧极其训练方法，希望大家喜欢！今天我们学习15个不同的技能，我们每天训练十分钟会让我们的技巧又很大的提升...</a>
+                    </dd>
+                </dl>
+                <br /><br />
+                <div class="people"><a style="float:left;font-size:15px;color:#d9d9d9">博主：足球之路2015</a><a style="float:left;font-size:15px;float:right;color:#d9d9d9">5月19日 17:35</a></div>
+            </div>
+
+            <div class="Content4" style="width: 655px; height: 178px;">
+                <dl>
+                    <dt>
+                        <img src="~/images/rB8CCl67nMWARGbTAAkTdES-ibc298.jpg" style="width:156px;height:104px;float:left" />
+                    </dt>
+                    <dd>
+                        <a style="font-size:22px;font-weight:bold;margin-left:10px">15五个提高临门一脚能力的训练方法</a><br /><br />
+                        <a href="#" style="font-size:18px;padding-left:10px">大家好，今天我们分享五个提高临门一脚能力的训练方法，希望大家喜欢！今天的五个提高临门一脚...[详细]</a>
+                    </dd>
+                </dl>
+                <br /><br />
+                <div class="people"><a style="float:left;font-size:15px;color:#d9d9d9">博主：足球之路2015</a><a style="float:left;font-size:15px;float:right;color:#d9d9d9">5月19日 17:35</a></div>
+            </div>
+
+            <div class="Content5" style="width: 655px; height: 178px;">
+                <dl>
+                    <dt>
+                        <img src="~/images/rB8CCl7E41uATox6AAGxh-uQMCg304.jpg" style="width:156px;height:104px;float:left" />
+                    </dt>
+                    <dd>
+                        <a style="font-size:22px;font-weight:bold;margin-left:10px">15个经典过人技巧极其训练方法</a><br /><br />
+                        <a href="#" style="font-size:18px;padding-left:10px">大家好，今天我们分享15个经典过人技巧极其训练方法，希望大家喜欢！今天我们学习15个不同的技能，我们每天训练十分钟会让我们的技巧又很大的提升...</a>
+                    </dd>
+                </dl>
+                <br /><br />
+                <div class="people"><a style="float:left;font-size:15px;color:#d9d9d9">博主：足球之路2015</a><a style="float:left;font-size:15px;float:right;color:#d9d9d9">5月19日 17:35</a></div>
+            </div>
+
+        </div>
+        <div class="content_right">
+            <!-- 登录信息 -->
+            <div class="login-info" data-sudaclick=blog_user>
+                <div class="not-login">
+                    <p>金文博友，欢迎回来！</p>
+                    <input id="loginName" type="text" autocomplete="off" placeholder="微博/博客/邮箱/手机号">
+                    <div class="mail-list">
+                        <span>请选择登录类型</span>
+                        <ul>
+                            <li class="active"><span></span></li>
+                            <li><span></span></li>
+                        </ul>
+                    </div>
+                    <input id="loginPassword" type="password" autocomplete="off" placeholder="请输入密码">
+                    <div class="btn-row">
+                        <div class="jfl">
+                            <a id="submit-btn" suda-uatrack="key=2018_blog_index&value=my_signin" class="login-btn" href="javascript:void(0);">登录</a>
+                        </div>
+                        <div class="jfr">
+                            <input suda-uatrack="key=2018_blog_index&value=my_signin_save" id="auto" value="true" type="checkbox" name="auto">
+                            <label suda-uatrack="key=2018_blog_index&value=my_signin_save" for="auto"><span>下次自动登录</span></label>
+                        </div>
+                    </div>
+                    <div class="other-btns">
+                        <a class="jfl" suda-uatrack="key=2018_blog_index&value=my_register" href="#" target="_blank">立即注册</a>
+                        <a class="jfl ml12" suda-uatrack="key=2018_blog_index&value=my_forgetpwd" href="#" target="_blank">忘记密码</a>
+                        <a class="jfr" suda-uatrack="key=2018_blog_index&value=my_help" href="#" target="_blank">帮助中心</a>
+                    </div>
+                </div>
+                <div class="logined">
+                </div>
+            </div>
+            <!-- 精彩推荐 -->
+            <div class="blog_tuijian">
+                <h3>精彩推荐</h3>
+                <ul class="list">
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200522ac/350/w690h460/20200522/89e3-itvqccc5582993.jpg/w74h74l50t50e27.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>李铁2大用人原则奏效国足胜利实至...</h4>
+                                <span class="tuijian_info">李铁2大用人原则奏效国足胜利实至名归，恒大国脚状态保持不错卡帅亦有功劳国足...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200522ac/600/w1920h1080/20200522/1a37-itvqccc6051202.jpg/w74h74l50t50d5a.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>花式足球技巧之身后提拉环绕地球...</h4>
+                                <span class="tuijian_info">大家好，今天我们分享花式足球系列之身后提拉环绕地球，希望大家喜欢！今天给...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200521ac/500/w650h650/20200521/7a10-itvqccc3521098.jpg/w74h74l50t50f71.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>吉鲁留队双重利好，切尔西打法更...</h4>
+                                <span class="tuijian_info">今晨很多老将都和球队完成续约，这也是因为今夏引援比较难，加上赛事重启还需...</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 广告 -->
+            <div class="blog_ads_right">
+                <a href="#" target="_blank"><img src="http://n.sinaimg.cn/blog/571a3812/20190710/111.png"></a>
+            </div>
+            <!-- 博文排行榜 -->
+            <div class="article_rank_right">
+                <h3>博文排行榜</h3>
+                <ul>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">唐朝人为什么偏爱吃羊肉？</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">唐朝为什么把《老子》改成《道德经》？</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">李铁2大用人原则奏效国足胜利实至名归，恒大...</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">唐朝有哪些成名的女诗人？</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">盖碗蒸蛋————2020-05-19</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">饕餮一日————2020-05-16</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">周末福利：舌尖上的美食</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">《关于在昭通中小学教育教学中推广应用五点...</a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" target="_blank">观澜湖高尔夫特价会籍</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 每周人气榜 -->
+            <script>var weekhot = { cat: '', num: '10' };</script>
+            <!-- 官方微博 -->
+            @*<div class="weibo_blog">
+                    <div class="official-media">
+                        <h3>官方微博</h3>
+                        <div class="content weibo-account-slider">
+                            <ul class="clearfix">
+                                <li class="official-media-item">
+                                    <a href="#" target="_blank">
+                                        <img src="http://n.sinaimg.cn/www/122/w80h42/20190710/fcb5-hzrevpz6343933.png" alt="金文体育" />
+                                    </a>
+                                    <p class="sec-t">
+                                        <a href="#" target="_blank">金文体育</a>
+                                    </p>
+                                    <p>金文体育新闻官方微博</p>
+                                </li>
+                                <li class="official-media-item">
+                                    <a href="#" target="_blank">
+                                        <img src="http://n.sinaimg.cn/top/transform/122/w80h42/20190710/8294-hzrevpz6384914.jpg" alt="金文NBA" />
+                                    </a>
+                                    <p class="sec-t">
+                                        <a href="#" target="_blank">金文NBA</a>
+                                    </p>
+                                    <p>金文NBA官方微博</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="weibo-account-slider-nav">
+                            <a class="active" href="javascript:void(0);"></a>
+                            <a class="" href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                </div>*@
+
+            <!-- 相关信息 -->
+            <div class="blog_info">
+                <div class="company-info" data-sudaclick="footer">
+                    <div class="box">
+                        <p class="tag "><i class="t1"></i><a href="#" target="_blank">金文博客意见反馈留言板</a></p>
+                        <p class="tag "><i class="t2"></i>400-052-0066 欢迎批评指正</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">金文简介</a>
+                            <a href="#" target="_blank">广告服务</a>
+                            <a href="#" target="_blank">About Sina</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">联系我们</a>
+                            <a href="#" target="_blank">招聘信息</a>
+                            <a href="#" target="_blank">通行证注册</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">产品答疑</a>
+                            <a href="#" target="_blank">网站律师</a>
+                            <a href="#" target="_blank">SINA English</a>
+                        </li>
+                    </ul>
+                    <div class="box">
+                        <p style="letter-spacing:0.4px;">Copyright © 1996-2020 SINA Corporation</p>
+                        <p>All Rights Reserved 金文公司 <a href="#" target="_blank">版权所有</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+    <script src="https://pluto.sina.cn/gk/match?id=1"></script>
+</body>
+
+<script type="text/javascript" src="//n.sinaimg.cn/blog/sub/js/manifest-81a643.js"></script>
+<script type="text/javascript" src="//n.sinaimg.cn/blog/sub/js/vendor-2c1e87.js"></script>
+<script src="//n.sinaimg.cn/blog/sub/js/feed-chunk-f7dc82.js"></script>
+<script type="text/javascript" src="//n.sinaimg.cn/blog/sub/js/index-e4430e.js"></script>
+@*<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+    <script type="text/javascript">
+        var SUDA = SUDA || [];
+    </script>*@
+</html>

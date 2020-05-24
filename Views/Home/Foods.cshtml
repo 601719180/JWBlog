@@ -1,0 +1,193 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>美食</title>
+    <link href="~/css/Foots/blog-login.css" rel="stylesheet" />
+    <link href="~/css/Foots/index-22f862.css" rel="stylesheet" />
+    <link href="~/css/Foots/outlogin_skin_reversion.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <!-- 频道nav -->
+    <div class="nav">
+        <div class="wrapper">
+            <ul class="nav-list">
+                <li><a target="_blank" href="#" class="">娱乐</a></li>
+                <li><a target="_blank" href="#" class="">文史</a></li>
+                <li><a target="_blank" href="#" class="">教育</a></li>
+                <li><a target="_blank" href="#" class="">体育</a></li>
+                <li><a target="_blank" href="#" class="cur">美食</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end频道nav -->
+    <!-- content -->
+    <div class="wrapper_content clearfix">
+        <div class="content_left">
+            <!-- 焦点图 -->
+            <div class="slider main-slider">
+                <ul class="slider-container">
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/zhuanlan/240/w650h390/20200519/fe2a-itvqcca2797986.jpg" alt="【微博福利派送】六一儿童节特别企划">
+                            <div class="bg">
+                                <p>【微博福利派送】六一儿童节特别企划</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/zhuanlan/240/w650h390/20200522/51a6-itvqccc5893154.jpg" alt="特浓牛奶雪糕——大小朋友最爱的夏日必备">
+                            <div class="bg">
+                                <p>特浓牛奶雪糕——大小朋友最爱的夏日必备</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/zhuanlan/240/w650h390/20200522/e0b1-itvqccc5894502.jpg" alt="【金耳芦笋炒虾仁】简单小菜，滋味怡情">
+                            <div class="bg">
+                                <p>【金耳芦笋炒虾仁】简单小菜，滋味怡情</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="left-arr" href="javascript:void(0);"></a>
+                <a class="right-arr" href="javascript:void(0);"></a>
+            </div>
+
+            <!-- end 焦点图  -->
+            <div class="blog-center">
+                <div id="feed" class="feed">
+                    <div id="flex-nav" class="flex-nav" data-sudaclick=feed_nav>
+                        <div class="feed-nav">
+                            <ul id="feed-top-nav" class="feed-top-nav">
+                                <li class="active">全部</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="feed-list" data-sudaclick="blog_feed"></ul>
+                    <div class="feed-loading">
+                        <span>加载中</span>
+                    </div>
+                    <div class="feed-end">
+                        <span>没有新的文章了，请看看其他频道吧！</span>
+                    </div>
+                </div>
+                <!-- feed end -->
+            </div>
+        </div>
+        <div class="content_right">
+            <!-- 登录信息 -->
+            <div class="login-info" data-sudaclick=blog_user>
+                <div class="not-login">
+                    <p>金文博友，欢迎回来！</p>
+                    <input id="loginName" type="text" autocomplete="off" placeholder="博客/邮箱/手机号">
+                    <div class="mail-list">
+                        <span>请选择登录类型</span>
+                        <ul>
+                            <li class="active"><span></span></li>
+                            <li><span></span></li>
+                        </ul>
+                    </div>
+                    <input id="loginPassword" type="password" autocomplete="off" placeholder="请输入密码">
+                    <div class="btn-row">
+                        <div class="jfl">
+                            <a id="submit-btn" suda-uatrack="key=2018_blog_index&value=my_signin" class="login-btn" href="javascript:void(0);">登录</a>
+                        </div>
+                        <div class="jfr">
+                            <input suda-uatrack="key=2018_blog_index&value=my_signin_save" id="auto" value="true" type="checkbox" name="auto">
+                            <label suda-uatrack="key=2018_blog_index&value=my_signin_save" for="auto"><span>下次自动登录</span></label>
+                        </div>
+                    </div>
+                    <div class="other-btns">
+                        <a class="jfl" suda-uatrack="key=2018_blog_index&value=my_register" href="#" target="_blank">立即注册</a>
+                        <a class="jfl ml12" suda-uatrack="key=2018_blog_index&value=my_forgetpwd" href="#" target="_blank">忘记密码</a>
+                        <a class="jfr" suda-uatrack="key=2018_blog_index&value=my_help" href="#" target="_blank">帮助中心</a>
+                    </div>
+                </div>
+                <div class="logined">
+                </div>
+            </div>
+            <!-- 精彩推荐 -->
+            <div class="blog_tuijian">
+                <h3>精彩推荐</h3>
+                <ul class="list">
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200521ac/533/w800h533/20200521/ffff-itvqccc3711236.jpg/w74h74l50t506d1.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>小满节气多给家人煮这瓜，搭配牛...</h4>
+                                <span class="tuijian_info">小满节气多给家人煮这个瓜，搭配牛肉最香，清热解暑，健康一年！这个瓜叫苦瓜...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200521ac/533/w800h533/20200521/ffff-itvqccc3711236.jpg/w74h74l50t506d1.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>小满节气多给家人煮这瓜，搭配牛...</h4>
+                                <span class="tuijian_info">小满节气多给家人煮这个瓜，搭配牛肉最香，清热解暑，健康一年！这个瓜叫苦瓜...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200521ac/533/w800h533/20200521/ffff-itvqccc3711236.jpg/w74h74l50t506d1.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>小满节气多给家人煮这瓜，搭配牛...</h4>
+                                <span class="tuijian_info">小满节气多给家人煮这个瓜，搭配牛肉最香，清热解暑，健康一年！这个瓜叫苦瓜...</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 相关信息 -->
+            <div class="blog_info">
+                <div class="company-info" data-sudaclick="footer">
+                    <div class="box">
+                        <p class="tag "><i class="t1"></i><a href="#" target="_blank">金文博客意见反馈留言板</a></p>
+                        <p class="tag "><i class="t2"></i>888-888-8888 欢迎批评指正</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">金文简介</a>
+                            <a href="#" target="_blank">广告服务</a>
+                            <a href="#" target="_blank">About JinWen</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">联系我们</a>
+                            <a href="#" target="_blank">招聘信息</a>
+                            <a href="#" target="_blank">通行证注册</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">产品答疑</a>
+                            <a href="#" target="_blank">网站律师</a>
+                            <a href="#" target="_blank">JinWen English</a>
+                        </li>
+                    </ul>
+                    <div class="box">
+                        <p style="letter-spacing:0.4px;">Copyright © 1996-2020 JinWen Corporation</p>
+                        <p>All Rights Reserved 金文公司 <a href="#" target="_blank">版权所有</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+</body>
+</html>
