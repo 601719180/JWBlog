@@ -8,11 +8,16 @@ namespace JWBlog.Controllers
 {
     public class HomeController : Controller
     {
+        //首页
         public ActionResult Index()
         {
             return View();
         }
 
-       
+        //娱乐
+        public ActionResult Game()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,240 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>娱乐</title>
+    <link href="~/css/Game.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 频道nav -->
+    <div class="nav">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <ul class="nav-list">
+                <li><a target="_blank" href="#" class="cur">娱乐</a></li>
+                <li><a target="_blank" href="#" class="">文史</a></li>
+                <li><a target="_blank" href="#" class="">股票</a></li>
+                <li><a target="_blank" href="#" class="">教育</a></li>
+                <li><a target="_blank" href="#" class="">体育</a></li>
+                <li><a target="_blank" href="#" class="">美食</a></li>
+                <li><a target="_blank" href="#" class="">育儿</a></li>
+                <li><a target="_blank" href="#" class="">星座</a></li>
+            </ul>
+            @*<script>
+                // 添加滚动事件
+                jsLoader(jsAssets.jq, function () {
+                    //nav交互内容
+                    $('.nav-list>li a').mouseenter(function () {
+                        $(this).addClass('active');
+                    }).mouseleave(function () {
+                        $(this).removeClass('active');
+                    });
+                    $('.nav .sub-nav').mouseenter(function () {
+                        $(this).find('.down-list').show();
+                    }).mouseleave(function () {
+                        $(this).find('.down-list').hide();
+                    });
+                    $('.sub-nav .down-list a').mouseenter(function () {
+                        $(this).addClass('active');
+                    }).mouseleave(function () {
+                        $(this).removeClass('active');
+                    });
+                });
+            </script>*@
+        </div>
+    </div>
+    <!-- end频道nav -->
+    <!-- content -->
+    <div class="wrapper_content clearfix">
+        <div class="content_left">
+            <!-- 焦点图 -->
+            <div class="slider main-slider">
+                <ul class="slider-container">
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/top/transform/240/w650h390/20190704/ccef-hzfekep8850110.jpg" alt="从辟谣到发糖，黄晓明baby“被离婚”大戏剧终？">
+                            <div class="bg">
+                                <p>从辟谣到发糖，黄晓明baby“被离婚”大戏剧终？</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/top/transform/240/w650h390/20190704/cd92-hzfekep8852169.jpg" alt="高圆圆高中旧照尽显清纯，网友：怪不得她会红">
+                            <div class="bg">
+                                <p>高圆圆高中旧照尽显清纯，网友：怪不得她会红</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slider-item">
+                        <a href="#" target="_blank">
+                            <img width="650" height="390" src="http://n.sinaimg.cn/top/transform/240/w650h390/20190704/53b0-hzfekep8855312.jpg" alt="刘德华喊话四大天王合体，做节目推广粤语歌，却怕张学友不愿意">
+                            <div class="bg">
+                                <p>刘德华喊话四大天王合体，做节目推广粤语歌，却怕张学友不愿意</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="left-arr" href="javascript:void(0);"></a>
+                <a class="right-arr" href="javascript:void(0);"></a>
+            </div>
+
+            <!-- end 焦点图  -->
+            <div class="blog-center">
+                <!-- feed start -->
+                @*<script type="text/javascript">
+                    var FEED_CARD_INFO = {
+                        //feed 的pageid
+                        pageId: 143,
+                        num: 30,//feed 单次请求长度
+                        feedWidth: 650,//feed展示宽度
+                        imgMargin: 8,//组图中的图片左右间距
+                        //兴趣设置参数
+                        subCateID: 100,//只有这个来记录用户订阅的顺序
+                        //固定首个位置
+                        firstTab: {
+                            txt: '最新内容',
+                            lid: 3091
+                        },
+                        //默认
+                        tabs: [3091],
+                        //全部
+                        allTabs: [3091],
+                        tabInfos: {}
+                    }
+                </script>*@
+                <div id="feed" class="feed">
+                    <div id="flex-nav" class="flex-nav" data-sudaclick=feed_nav>
+                        <div class="feed-nav">
+                            <ul id="feed-top-nav" class="feed-top-nav">
+                                <li class="active">全部</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="feed-list" data-sudaclick="blog_feed"></ul>
+                    <div class="feed-loading">
+                        <span>加载中</span>
+                    </div>
+                    <div class="feed-end">
+                        <span>没有新的文章了，请看看其他频道吧！</span>
+                    </div>
+                </div>
+                <!-- feed end -->
+            </div>
+        </div>
+        <div class="content_right">
+            <!-- 登录信息 -->
+            <div class="login-info" data-sudaclick=blog_user>
+                <div class="not-login">
+                    <p>金文博友，欢迎回来！</p>
+                    <input id="loginName" type="text" autocomplete="off" placeholder="博客/邮箱/手机号">
+                    <div class="mail-list">
+                        <span>请选择登录类型</span>
+                        <ul>
+                            <li class="active"><span></span></li>
+                            <li><span></span></li>
+                        </ul>
+                    </div>
+                    <input id="loginPassword" type="password" autocomplete="off" placeholder="请输入密码">
+                    <div class="btn-row">
+                        <div class="jfl">
+                            <a id="submit-btn" suda-uatrack="key=2018_blog_index&value=my_signin" class="login-btn" href="javascript:void(0);">登录</a>
+                        </div>
+                        <div class="jfr">
+                            <input suda-uatrack="key=2018_blog_index&value=my_signin_save" id="auto" value="true" type="checkbox" name="auto">
+                            <label suda-uatrack="key=2018_blog_index&value=my_signin_save" for="auto"><span>下次自动登录</span></label>
+                        </div>
+                    </div>
+                    <div class="other-btns">
+                        <a class="jfl" suda-uatrack="key=2018_blog_index&value=my_register" href="#"y target="_blank">立即注册</a>
+                        <a class="jfl ml12" suda-uatrack="key=2018_blog_index&value=my_forgetpwd" href="#" target="_blank">忘记密码</a>
+                        <a class="jfr" suda-uatrack="key=2018_blog_index&value=my_help" href="#" target="_blank">帮助中心</a>
+                    </div>
+                </div>
+                <div class="logined">
+                </div>
+            </div>
+            <!-- 精彩推荐 -->
+            <div class="blog_tuijian">
+                <h3>精彩推荐</h3>
+                <ul class="list">
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200522ac/232/w640h392/20200522/147e-itvqccc5683336.jpg/w74h74l50t50495.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>郑恺苗苗：卡点官宣结婚，“我爱...</h4>
+                                <span class="tuijian_info">  01之前，听到郑恺与苗苗同出同入——我就觉得，不错啊。毕竟，苗苗是个文静...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200522ac/232/w640h392/20200522/147e-itvqccc5683336.jpg/w74h74l50t50495.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>郑恺苗苗：卡点官宣结婚，“我爱...</h4>
+                                <span class="tuijian_info">  01之前，听到郑恺与苗苗同出同入——我就觉得，不错啊。毕竟，苗苗是个文静...</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pic">
+                            <a href="#" target="_blank"><img src="http://k.sinaimg.cn/n/sinablog20200522ac/232/w640h392/20200522/147e-itvqccc5683336.jpg/w74h74l50t50495.jpg" /></a>
+                        </span>
+                        <span class="tuijian_wenzi">
+                            <a href="#" target="_blank">
+                                <h4>郑恺苗苗：卡点官宣结婚，“我爱...</h4>
+                                <span class="tuijian_info">  01之前，听到郑恺与苗苗同出同入——我就觉得，不错啊。毕竟，苗苗是个文静...</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 相关信息 -->
+            <div class="blog_info">
+                <div class="company-info" data-sudaclick="footer">
+                    <div class="box">
+                        <p class="tag "><i class="t1"></i><a href="#" target="_blank">金文博客意见反馈留言板</a></p>
+                        <p class="tag "><i class="t2"></i>888-888-8888 欢迎批评指正</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">金文简介</a>
+                            <a href="#" target="_blank">广告服务</a>
+                            <a href="#" target="_blank">About Sina</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">联系我们</a>
+                            <a href="#" target="_blank">招聘信息</a>
+                            <a href="#" target="_blank">通行证注册</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">产品答疑</a>
+                            <a href="#" target="_blank">网站律师</a>
+                            <a href="#" target="_blank">SINA English</a>
+                        </li>
+                    </ul>
+                    <div class="box">
+                        <p style="letter-spacing:0.4px;">Copyright © 1996-2020 SINA Corporation</p>
+                        <p>All Rights Reserved 金文Blog <a href="#" target="_blank">版权所有</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+</body>
+</html>
