@@ -41,7 +41,7 @@ namespace JWBlog.Controllers
         {
             return View();
         }
-        #endregion                                                                                                           
+        #endregion
 
         #region 注册
         public ActionResult Register()
@@ -58,6 +58,7 @@ namespace JWBlog.Controllers
         #endregion
 
 
+       
 
     }
 }
