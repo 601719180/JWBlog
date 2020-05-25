@@ -36,6 +36,13 @@ namespace JWBlog.Controllers
         }
         #endregion
 
+        #region 旅游
+        public ActionResult Go()
+        {
+            return View();
+        }
+        #endregion
+
         #region 文章详情
         public ActionResult ArticleDetails()
         {
