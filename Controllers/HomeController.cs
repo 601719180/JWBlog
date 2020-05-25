@@ -57,8 +57,13 @@ namespace JWBlog.Controllers
         }
         #endregion
 
+        #region 路由
+        public ActionResult g()
+        {
+            return View();
+        }
+        #endregion
 
-       
 
     }
 }
