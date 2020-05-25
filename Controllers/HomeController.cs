@@ -61,6 +61,7 @@ namespace JWBlog.Controllers
         #region 旅游
         public ActionResult Go()
         {
+
             return View();
         }
         #endregion
