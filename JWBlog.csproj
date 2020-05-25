@@ -204,6 +204,7 @@
     <Content Include="Views\Home\Foods.cshtml" />
     <Content Include="Views\Home\ArticleDetails.cshtml" />
     <Content Include="Views\Home\PE.cshtml" />
+    <Content Include="Views\Home\Go.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="js\" />
